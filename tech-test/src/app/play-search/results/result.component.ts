@@ -47,8 +47,13 @@ export class ResultComponent implements OnInit {
         this.resultListing = response;
         this.isAvailable = false;
 
-        //this.router.navigate([`pitches/${event.id}`], { queryParams: { starts: event.attributes.starts, ends: event.attributes.ends } });
+        const urlTree = this.router.createUrlTree([], {
+          queryParams: { starts: event.attributes.starts, ends: event.attributes.ends },
+          queryParamsHandling: "merge",
+          preserveFragment: true
+        });
 
+        this.router.navigateByUrl(urlTree);
       }, error => {
         this.isAvailable = true
       })
