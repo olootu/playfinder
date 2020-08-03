@@ -10,10 +10,11 @@
             <div class="view d-md-flex">
               Slot Id: # {{pitch.id }}<br />
               Start Date: {{pitch.attributes.starts | date:'shortTime'}}
+              {{pitch.attributes.starts | date:'shortDate'}}
               <br />
               Duration: {{ pitch.attributes.ends  | date:"h 'hours' mm 'minutes'"}}
               <br />
-              Price: £{{pitch.attributes.price}}
+              Price: {{pitch.attributes.currency}} {{pitch.attributes.price}}
               <br />
               Coverted Price in EURO: {{pitch.attributes.price | converter}} &#8364;
               <br />
