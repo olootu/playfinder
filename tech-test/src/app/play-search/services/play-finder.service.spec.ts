@@ -25,7 +25,7 @@ describe('PlayFinderService', () => {
     expect(service).toBeTruthy();
   }));
 
-  it('should return all todos', inject([ApiMockService], (service: ApiMockService) => {
+  it('should return all Pitches', inject([ApiMockService], (service: ApiMockService) => {
     const getAll = service.getPitches();
     expect(getAll).not.toBeNull();
   }));
