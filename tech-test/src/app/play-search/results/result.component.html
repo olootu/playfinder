@@ -1,0 +1,6 @@
+<section class="search-app">
+  <search (searchPitches)="searchPitches($event)" [pfModel]="pfModel">
+  </search>
+  <app-result-items [isAvailable]="isAvailable" [resultListing]="resultListing?.data">
+  </app-result-items>
+</section>

@@ -1,0 +1,28 @@
+<section class="main">
+  <div *ngIf="isAvailable">
+    <h2>Sorry no items found...</h2>
+  </div>
+  <div class="content" *ngIf="resultListing?.length > 0 && !isAvailable">
+    <table class="table">
+      <tbody>
+        <tr *ngFor="let pitch of resultListing | paginate: config ">
+          <td>
+            <div class="view d-md-flex">
+              Slot Id: # {{pitch.id }}<br />
+              Start Date: {{pitch.attributes.starts | date:'shortTime'}}
+              <br />
+              Duration: {{ pitch.attributes.ends  | date:"h 'hours' mm 'minutes'"}}
+              <br />
+              Price: £{{pitch.attributes.price}}
+              <br />
+              Coverted Price in EURO: {{pitch.attributes.price | converter}} &#8364;
+              <br />
+              Availabilities: {{pitch.attributes.availabilities}}
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <pagination-controls (pageChange)="onPageChange($event)"></pagination-controls>
+  </div>
+</section>
