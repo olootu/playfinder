@@ -7,7 +7,7 @@ import { PlayFinder } from '../playfinder.model';
   styleUrls: ['./search.component.scss']
 })
 export class SearchComponent implements OnInit {
-  @Input() pfModel: PlayFinder;
+  @Input() pfModel: PlayFinder[] = [];
 
   @Output() searchPitches = new EventEmitter();
 

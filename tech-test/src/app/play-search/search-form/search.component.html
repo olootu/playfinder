@@ -1,4 +1,4 @@
-<header class="header">
+<header class="header" *ngIf="pfModel && pfModel.attributes">
   <p class="form-error pl-1 text-danger" *ngIf="formError">Please fill-in fields with -></p>
   <div>
     <form class="form-inline" #searchForm="ngForm" (ngSubmit)="searchPitch(searchForm, pfModel)" novalidate>

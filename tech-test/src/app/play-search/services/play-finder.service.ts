@@ -18,8 +18,8 @@ export class PlayFinderService {
   constructor(private http: HttpClient) { };
 
   // GET all Pitches
-  getPitches(id, starts, ends): Observable<PlayFinder> {
-    return this.http.get<PlayFinder>(`${baseApi}/${id}/slots?filter[starts]=${starts}&filter[ends]=${ends}`)
+  getPitches(id, starts, ends): Observable<PlayFinder[]> {
+    return this.http.get<PlayFinder[]>(`${baseApi}/${id}/slots?filter[starts]=${starts}&filter[ends]=${ends}`)
       .pipe(
         retry(1),
         catchError(this.handleError)

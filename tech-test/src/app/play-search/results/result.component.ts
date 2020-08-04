@@ -10,7 +10,7 @@ import { PlayFinder } from '../playfinder.model';
 })
 export class ResultComponent implements OnInit {
 
-  resultListing: PlayFinder;
+  resultListing: PlayFinder[] = [];
   isAvailable: boolean = false
   pfModel: PlayFinder = {
     id: '32990',

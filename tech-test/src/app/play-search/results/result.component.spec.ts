@@ -2,6 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { ResultComponent } from './result.component';
 import { FormsModule } from '@angular/forms';
+import { SearchModule } from '../search.module'
 import { ResultItemsComponent } from '../result-items/result-items.component';
 import { SearchComponent } from '../search-form/search.component';
 import { curconvertPipe } from '../curr-converter.pipe';
@@ -19,7 +20,7 @@ describe('ToDoListComponent', () => {
     beforeEach(async(() => {
         TestBed.configureTestingModule({
             declarations: [ResultItemsComponent, SearchComponent, ResultComponent, curconvertPipe],
-            imports: [FormsModule, HttpClientModule, NgxPaginationModule],
+            imports: [FormsModule, SearchModule, HttpClientModule, NgxPaginationModule],
             providers: [
                 ActivatedRoute, Router,
                 PlayFinderService,
