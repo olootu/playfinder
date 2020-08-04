@@ -3,6 +3,7 @@ import { PlayFinderService } from '../services/play-finder.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { PlayFinder } from '../playfinder.model';
 
+
 @Component({
   selector: 'app-result',
   templateUrl: './result.component.html',
@@ -27,7 +28,7 @@ export class ResultComponent implements OnInit {
 
   constructor(
     private playFinderService: PlayFinderService,
-    private activatedRoute: ActivatedRoute,
+    // private activatedRoute: ActivatedRoute,
     private router: Router
   ) { }
 
