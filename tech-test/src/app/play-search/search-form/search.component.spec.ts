@@ -4,7 +4,7 @@ import { SearchComponent } from './search.component';
 import { FormsModule } from '@angular/forms';
 import { PlayFinder } from '../playfinder.model';
 
-fdescribe('SearchComponent', () => {
+describe('SearchComponent', () => {
   let component: SearchComponent;
   let fixture: ComponentFixture<SearchComponent>;
 
